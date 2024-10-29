@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 namespace Common.Transversal
 {
     [ApiController]
-    [Route("api/v1/[controller]")]
+    [Route("api/v1/[controller][action]")]
     public class BaseController<T>: ControllerBase
     {
         protected ILogger<T>? _logger;

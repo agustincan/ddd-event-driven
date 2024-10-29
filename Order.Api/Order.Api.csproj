@@ -15,8 +15,4 @@
     <ProjectReference Include="..\Common.Transversal\Common.Transversal.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="EventConsumers\" />
-  </ItemGroup>
-
 </Project>

@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  rabbit1:
+    image: rabbitmq:4.0-management
+    hostname: rabbit1
+    ports:
+      - "5672:5672"  # AMQP port
+      - "15672:15672"  # Management UI port
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin1234
+    volumes:
+      - D:\docker\rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - micro1
+
+networks:
+  micro1:
+    driver: bridge

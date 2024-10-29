@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Offer.Api", "Offer.Api\Offe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Transversal", "Common.Transversal\Common.Transversal.csproj", "{89FFAB07-C488-487C-B1BE-35C7D861C27F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "rabbitmq", "rabbitmq", "{412EC7EA-2E0C-41EA-9A20-165BF8FB81ED}"
+	ProjectSection(SolutionItems) = preProject
+		rabbitmq\docker-compose.yml = rabbitmq\docker-compose.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

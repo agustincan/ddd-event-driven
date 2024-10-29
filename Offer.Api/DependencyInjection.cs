@@ -1,4 +1,5 @@
 ﻿using MassTransit;
+using Offer.Api.Consumers;
 
 namespace Offer.Api
 {
@@ -14,6 +15,10 @@ namespace Offer.Api
         {
             services.AddMassTransit(x =>
             {
+                x.AddConsumer<OfferCreatedConsumer>();
+                x.AddConsumer<OfferUpdatedConsumer>();
+                x.AddConsumer<OfferPatchedConsumer>();
+                x.AddConsumer<OfferDeletedConsumer>();
                 x.SetKebabCaseEndpointNameFormatter();
                 x.UsingRabbitMq((context, cfg) =>
                 {
@@ -23,6 +28,16 @@ namespace Offer.Api
                         h.Password("admin1234");
                     });
                     cfg.ConfigureEndpoints(context);
+                    //cfg.ReceiveEndpoint("offer-created-queue", e =>
+                    //cfg.ReceiveEndpoint(e =>
+                    //{
+                    //    e.ConfigureConsumer<OfferCreatedConsumer>(context);
+                    //});
+                    //cfg.ReceiveEndpoint("offer-updated-queue", e =>
+                    //cfg.ReceiveEndpoint(e =>
+                    //{
+                    //    e.ConfigureConsumer<OfferUpdatedConsumer>(context);
+                    //});
                 });
 
             });

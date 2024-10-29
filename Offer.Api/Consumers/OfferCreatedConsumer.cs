@@ -1,7 +1,7 @@
-﻿using Common.Transversal.Events;
+﻿using Common.Transversal.Events.Offers;
 using MassTransit;
 
-namespace Order.Api.Consumers
+namespace Offer.Api.Consumers
 {
     public class OfferCreatedConsumer : IConsumer<OfferCreatedEvent>
     {

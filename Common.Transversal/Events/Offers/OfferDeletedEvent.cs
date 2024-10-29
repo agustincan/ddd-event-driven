@@ -1,4 +1,4 @@
-﻿namespace Common.Transversal.Events
+﻿namespace Common.Transversal.Events.Offers
 {
     public class OfferDeletedEvent
     {

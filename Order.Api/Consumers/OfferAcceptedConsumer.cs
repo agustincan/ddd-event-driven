@@ -1,4 +1,4 @@
-﻿using Common.Transversal.Events;
+﻿using Common.Transversal.Events.Offers;
 using MassTransit;
 
 namespace Order.Api.Consumers
