@@ -3,16 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Api", "Order.Api\Order.Api.csproj", "{4BA9F9E5-CEC2-462C-B1EA-9A7AE602DCF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Api", "Order.Api\Order.Api.csproj", "{4BA9F9E5-CEC2-462C-B1EA-9A7AE602DCF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Offer.Api", "Offer.Api\Offer.Api.csproj", "{A75398B5-EF53-4FD4-8914-5B24B6A10418}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Offer.Api", "Offer.Api\Offer.Api.csproj", "{A75398B5-EF53-4FD4-8914-5B24B6A10418}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Transversal", "Common.Transversal\Common.Transversal.csproj", "{89FFAB07-C488-487C-B1BE-35C7D861C27F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Transversal", "Common.Transversal\Common.Transversal.csproj", "{89FFAB07-C488-487C-B1BE-35C7D861C27F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "rabbitmq", "rabbitmq", "{412EC7EA-2E0C-41EA-9A20-165BF8FB81ED}"
 	ProjectSection(SolutionItems) = preProject
 		rabbitmq\docker-compose.yml = rabbitmq\docker-compose.yml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Saga.Api", "Order.Saga.Api\Order.Saga.Api.csproj", "{9F24E07D-833D-41E6-8FF5-A924496BB913}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{89FFAB07-C488-487C-B1BE-35C7D861C27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89FFAB07-C488-487C-B1BE-35C7D861C27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89FFAB07-C488-487C-B1BE-35C7D861C27F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F24E07D-833D-41E6-8FF5-A924496BB913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F24E07D-833D-41E6-8FF5-A924496BB913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F24E07D-833D-41E6-8FF5-A924496BB913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F24E07D-833D-41E6-8FF5-A924496BB913}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,8 +8,5 @@ namespace Order.Api.Controllers.v1
         {
             
         }
-
-        
-        
     }
 }

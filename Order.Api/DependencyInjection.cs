@@ -19,6 +19,7 @@ namespace Order.Api
                         h.Password("admin1234");
                     });
                     cfg.ConfigureEndpoints(context);
+                    
                     //cfg.ReceiveEndpoint("offer-accepted-queue", e =>
                     //{
                     //    e.ConfigureConsumer<OfferAcceptedConsumer>(context);

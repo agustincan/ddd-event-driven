@@ -1,5 +1,6 @@
 ﻿using MassTransit;
 using Offer.Api.Consumers;
+using Offer.Api.Consumers.Definitions;
 
 namespace Offer.Api
 {
@@ -15,10 +16,11 @@ namespace Offer.Api
         {
             services.AddMassTransit(x =>
             {
-                x.AddConsumer<OfferCreatedConsumer>();
+                x.AddConsumer<OfferCreatedConsumer, OfferCreatedConsumerDefinition>();
                 x.AddConsumer<OfferUpdatedConsumer>();
                 x.AddConsumer<OfferPatchedConsumer>();
                 x.AddConsumer<OfferDeletedConsumer>();
+                
                 x.SetKebabCaseEndpointNameFormatter();
                 x.UsingRabbitMq((context, cfg) =>
                 {
