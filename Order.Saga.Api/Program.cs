@@ -3,6 +3,7 @@ using Order.Saga.Api;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddApiServices();
 builder.Services.AddMassTransitService();
 
 builder.Services.AddControllers();

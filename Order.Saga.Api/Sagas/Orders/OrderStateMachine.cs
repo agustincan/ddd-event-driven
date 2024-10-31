@@ -22,13 +22,13 @@ namespace Order.Saga.Api.Sagas.Orders
         }
     }
 
-    internal class OrderStateIntMachine : MassTransitStateMachine<OrderStateInt>
+    internal class OrderStateIntMachine : BaseOrderStateMachine<OrderStateInt>
     {
-        public State Submitted { get; private set; } = null!;
-        public State Accepted { get; private set; } = null!;
+        public Guid CorrelationId { get; private set; }
 
-        public OrderStateIntMachine()
+        public OrderStateIntMachine(Guid CorrelationId)
         {
+            this.CorrelationId = CorrelationId;
             InstanceState(x => x.CurrentStateInt, Submitted, Accepted);
             SetCompletedWhenFinalized();
         }
